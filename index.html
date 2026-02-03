@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Assiette d'Or - Restaurant Gastronomique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">L'Assiette d'Or</div>
+            <div class="navbar-menu">
+                <a href="#histoire" class="navbar-link">Notre Histoire</a>
+                <a href="#menu" class="navbar-link">Menu</a>
+                <a href="#galerie" class="navbar-link">Galerie</a>
+                <a href="#contact" class="navbar-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background" style="background-image: url('images/hero-plat-principal.jpg');">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">L'Assiette d'Or</h1>
+            <p class="hero-subtitle">Gastronomie d'Excellence</p>
+            <button class="hero-button" onclick="handleReservation()">Réserver une Table</button>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Notre Histoire -->
+    <section id="histoire" class="histoire">
+        <div class="container">
+            <h2 class="section-title">Notre Histoire</h2>
+            <div class="histoire-content">
+                <p>
+                    Depuis sa création en 2010, L'Assiette d'Or incarne l'excellence culinaire française. Notre restaurant, niché au cœur de la ville, est le reflet d'une passion inébranlable pour la gastronomie et le raffinement.
+                </p>
+                <p>
+                    Nos chefs, formés dans les plus grands restaurants du monde, subliment les produits locaux et internationaux pour créer une cuisine d'exception. Chaque plat est une œuvre d'art, où tradition et innovation se rencontrent harmonieusement.
+                </p>
+                <p>
+                    Nous sélectionnons rigoureusement nos fournisseurs, privilégiant les producteurs locaux et les produits de saison. Cette philosophie garantit la qualité et la fraîcheur de chaque ingrédient qui compose nos assiettes.
+                </p>
+                <p>
+                    L'Assiette d'Or n'est pas qu'un restaurant, c'est une destination. Un lieu où la gastronomie devient une expérience inoubliable, où chaque détail est pensé pour votre plaisir et votre bien-être.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Menu Interactif -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Notre Menu</h2>
+            <div class="menu-categories">
+                <!-- Entrées -->
+                <div class="menu-category">
+                    <button class="menu-category-header" onclick="toggleMenu(this)">
+                        <span>Entrées</span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="menu-items" style="display: none;">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Huître Gratinée</h4>
+                                <span class="price">24€</span>
+                            </div>
+                            <p class="menu-item-description">Huître de Bretagne, beurre blanc, champagne</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Foie Gras Poêlé</h4>
+                                <span class="price">32€</span>
+                            </div>
+                            <p class="menu-item-description">Foie gras de canard, réduction de cassis, pain d'épices</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Salade de Homard</h4>
+                                <span class="price">28€</span>
+                            </div>
+                            <p class="menu-item-description">Homard bleu, légumes de saison, vinaigrette à l'estragon</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Soupe à l'Oignon</h4>
+                                <span class="price">18€</span>
+                            </div>
+                            <p class="menu-item-description">Oignons caramélisés, croûte dorée, fromage de Gruyère</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats -->
+                <div class="menu-category">
+                    <button class="menu-category-header" onclick="toggleMenu(this)">
+                        <span>Plats</span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="menu-items" style="display: none;">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Côte de Boeuf Maturée</h4>
+                                <span class="price">58€</span>
+                            </div>
+                            <p class="menu-item-description">Viande maturée 45 jours, sauce béarnaise, légumes de saison</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Turbot Sauvage</h4>
+                                <span class="price">52€</span>
+                            </div>
+                            <p class="menu-item-description">Turbot rôti, beurre blanc citronné, asperges blanches</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Homard Thermidor</h4>
+                                <span class="price">62€</span>
+                            </div>
+                            <p class="menu-item-description">Homard breton, sauce Thermidor, riz sauvage</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Canard aux Cerises</h4>
+                                <span class="price">48€</span>
+                            </div>
+                            <p class="menu-item-description">Magret de canard, sauce aux cerises, légumes racines</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category">
+                    <button class="menu-category-header" onclick="toggleMenu(this)">
+                        <span>Desserts</span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="menu-items" style="display: none;">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Soufflé au Chocolat</h4>
+                                <span class="price">16€</span>
+                            </div>
+                            <p class="menu-item-description">Soufflé au chocolat noir, sauce anglaise, vanille de Tahiti</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Panna Cotta aux Fruits Rouges</h4>
+                                <span class="price">14€</span>
+                            </div>
+                            <p class="menu-item-description">Panna cotta, coulis de fruits rouges, biscuit croustillant</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Tarte Tatin</h4>
+                                <span class="price">12€</span>
+                            </div>
+                            <p class="menu-item-description">Tarte Tatin classique, crème fraîche, caramel beurre salé</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Assiette de Fromages</h4>
+                                <span class="price">18€</span>
+                            </div>
+                            <p class="menu-item-description">Sélection de fromages français, pain grillé, fruits secs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Galerie -->
+    <section id="galerie" class="galerie">
+        <div class="container">
+            <h2 class="section-title">Galerie</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large">
+                    <img src="images/hero-plat-principal.jpg" alt="Plat principal raffiné">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/BdPnER5K3QwV.jpeg" alt="Présentation gastronomique">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ijRYiLQvLPra.jpg" alt="Plat gourmet">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/i3xu37steEps.jpg" alt="Assiette gastronomique">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item gallery-item-wide">
+                    <img src="images/OnXcYKAHEpY5.jpg" alt="Intérieur restaurant luxe">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item gallery-item-large">
+                    <img src="images/B2Y4clnfJZEn.jpg" alt="Ambiance restaurant">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/2GDMg0gdAGmK.jpg" alt="Dessert Michelin">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/xx8R1HwFqzWn.jpg" alt="Entrée Michelin">
+                    <div class="gallery-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Nous Contacter</h3>
+                    <p>📍 123 Rue de la Gastronomie, 75000 Paris</p>
+                    <p>📞 +33 (0)1 23 45 67 89</p>
+                    <p>📧 contact@assiettedor.fr</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Jeudi: 12h00 - 14h30 / 19h00 - 23h00</p>
+                    <p>Vendredi - Samedi: 12h00 - 14h30 / 19h00 - 00h00</p>
+                    <p>Dimanche: 12h00 - 15h00 / 19h00 - 23h00</p>
+                    <p class="closed">Fermé le lundi soir</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <p><a href="#" class="social-link">Instagram</a></p>
+                    <p><a href="#" class="social-link">Facebook</a></p>
+                    <p><a href="#" class="social-link">Twitter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 L'Assiette d'Or. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+                      
